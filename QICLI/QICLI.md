@@ -1,18 +1,31 @@
 # Nao API - qicli Info
 
-This is a small guide to the methods used by the qicli utility on the Nao Robot.
+This is a small guide to the modules and methods used by the qicli utility on the Nao Robot.
 
 Methods are listed Alphabetically, rather than by their number in the API.
 
 ## Usage: 
 
-' $ qicli info <module_number> '
+'''
+Usage: qicli [OPTIONS] SUBCMD [-h] [OPTIONS] [ARGS]:
+  -h [ --help ]         Print this help message and exit
 
-Returns a list of methods relating to the module.
+sub commands:
+  info     [<ServicePattern>...]
+  call     <ServicePattern.MethodPattern> [<JsonParameter>...]
+  post     <ServicePattern.SignalPattern> [<JsonParameter>...]
+  get      <ServicePattern.PropertyPattern>...
+  set      <ServicePattern.PropertyPattern>... <JsonParameter>
+  watch    <ServicePattern.SignalPattern>...
+  top      [-i interval] [<ServicePattern> ..]
+  trace    [<ServicePattern> ..]
+  log-view
+  log-send <message>
+'''
 
-' $ qicli call <module_number>.<method_number> <args> '
+' $ qicli info <module_number> ' Returns a list of methods relating to the module.
 
-Calls a method.
+' $ qicli call <module_number>.<method_number> <args> ' Calls a method.
 
 # Getting information on specific methods 
 
